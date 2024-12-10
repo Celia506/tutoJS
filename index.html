@@ -37,5 +37,51 @@
     <footer>
         <p>© 2023 Tous droits réservés</p>
     </footer>
+
+<script> 
+// par cedric
+    const header = document.getElementById('main-header');
+    header.style.backgroundColor = 'red';
+
+
+//     Trouvez tous les éléments avec la classe highlight.
+// Appliquez-leur une couleur de texte blue.
+    const high = document.querySelectorAll('.highlight');
+    high.forEach(element=>{
+    element.style.color = 'blue';
+    });   
+
+
+// Utilisez querySelector pour sélectionner le premier élément span dans l'article qui a la classe highlight.
+// // Appliquez-lui une couleur de texte green
+    const span = document.querySelector('#main-article .highlight');
+    span.style.color = "green";
+
+
+// Sélectionnez tous les li qui ont la classe menu-item dans le nav.
+// Ajoutez une bordure de 1px solid black à chaque li.
+    const menuItems = document.querySelectorAll('nav, .menu-item');
+    menuItems.forEach(item =>{
+    item.style.border = '1px solid black';         
+    });
+
+// sur h1 faire en sorte que le click declanche un autre fond 
+    const titrePink = document.querySelector('h1')
+    titrePink.addEventListener('click' ,function(){
+    titrePink.style.backgroundColor = "pink";
+    });
+
+// evenement sur chaque span.highlight au survole de la souris
+    const spanHigh = document.querySelectorAll('span.highlight')
+    spanHigh.forEach(span =>{
+        span.addEventListener('mouseover', function(){
+            span.style.color = 'red';
+        })
+        span.addEventListener('mouseout',()=>{
+            span.style.color = "black";
+        })
+    })
+
+</script>    
 </body>
 </html>
